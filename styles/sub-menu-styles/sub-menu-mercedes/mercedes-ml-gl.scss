@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css");
+@import "../../varriable.scss";
+@import "../../animations.scss";
+@import "../../mixins.scss";
+// Header
+.header-background-image {
+    background-image: url(../../../images/mercedes-sub-pictures/main-background-mercedes-pages/main-background-mercedes-ml-class.jpg);
+    background-size: cover;
+    background-position:center;
+    height: 100vh;
+}
+
+nav {
+    width: 90%;
+    background-color: #433b4236;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 75px;
+    opacity: 0.9;
+    transform: skew(-35deg);
+    margin-top: 3px;
+}
+
+.contacts {
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    .contacts-phone {
+        display: flex;
+        transform: skew(35deg);
+        align-items: center;
+        i {
+            font-size: $fontAwesomeIconsFontsize;
+            padding-right: 35px;
+            color: $blueColorForItems;
+            animation: phone-contact-animation 1.2s ease-out 0.1s;
+        }
+        .contacts-phone-content p:first-of-type {
+            font-size: 18px;
+        }
+        .contacts-phone-content p:last-of-type {
+            font-size: 22px;
+        }
+    }
+    .contacts-working-graphic {
+        display: flex;
+        align-items: center;
+        transform: skew(35deg);
+        i {
+            font-size: $fontAwesomeIconsFontsize;
+            padding-right: 35px;
+            color: $blueColorForItems;
+            animation: graphic-work-animation 1.2s ease-out 0.1s;
+        }
+        p:first-of-type {
+            font-size: 18px;
+        }
+        p:last-of-type {
+            font-size: 22px;
+        }
+    }
+}
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px;
+    transform: skew(35deg);
+    h1 {
+        cursor: pointer;
+        transition: color 0.3s ease-out;
+        &:hover {
+            color: $blueColorForItems;
+        }
+    }
+    /*Primary menu*/
+
+    .primary-menu-ul {
+        display: flex;
+        .primary-menu-li {
+           @include primary-menu-list-items();
+            animation: primary-menu-animation 0.9s ease-out;
+        }
+    }
+    /* Sub menu*/
+    /*Mercedes sub menu*/
+    .mercedes-sub-menu {
+        display: none;
+    }
+    .primary-mercedes-li:hover .mercedes-sub-menu {
+        display: block;
+        position: absolute;
+        background-color: inherit;
+        border-radius: 5px;
+        padding: 30px 0;
+        @include sub-menu-ul-animation();
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            border-top: 2px solid $blueColorForItems;
+            background-color: black;
+            border-radius: 5px;
+            li {
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid $blueColorForItems;
+                &:last-of-type {
+                    border-bottom: none;
+                }
+                @include sub-menu-ul-animation();
+            }
+        }
+        .mercedes-sub-menu-items:hover {
+            @include sub-menu-list-items-animation();
+        }
+    }
+    /*Audi sub-menu*/
+
+    .audi-sub-menu {
+        display: none;
+    }
+    .primary-audi-li:hover .audi-sub-menu {
+        display: block;
+        position: absolute;
+        background-color: inherit;
+        border-radius: 5px;
+        padding: 30px 0;
+        @include sub-menu-ul-animation();
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            border-top: 2px solid $blueColorForItems;
+            background-color: black;
+            border-radius: 5px;
+            li {
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid $blueColorForItems;
+                &:last-of-type {
+                    border-bottom: none;
+                }
+                @include sub-menu-ul-animation();
+            }
+        }
+        .audi-sub-menu-items:hover {
+            @include sub-menu-list-items-animation();
+        }
+    }
+    /*BMW sub menu*/
+    .bmw-sub-menu {
+        display: none;
+    }
+    .primary-bmw-li:hover .bmw-sub-menu {
+        display: block;
+        position: absolute;
+        background-color: inherit;
+        border-radius: 5px;
+        padding: 30px 0;
+        @include sub-menu-ul-animation();
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            border-top: 2px solid $blueColorForItems;
+            background-color: black;
+            border-radius: 5px;
+            li {
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid $blueColorForItems;
+                &:last-of-type {
+                    border-bottom: none;
+                }
+                @include sub-menu-ul-animation();
+            }
+        }
+        .bmw-sub-menu-items:hover {
+            @include sub-menu-list-items-animation();
+        }
+    }
+    /*Porsche sub-menu*/
+    .porsche-sub-menu {
+        display: none;
+    }
+    .primary-porsche-li:hover .porsche-sub-menu {
+        display: block;
+        position: absolute;
+        background-color: inherit;
+        border-radius: 5px;
+        padding: 30px 0;
+        @include sub-menu-ul-animation();
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            border-top: 2px solid $blueColorForItems;
+            background-color: black;
+            border-radius: 5px;
+            li {
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid $blueColorForItems;
+                &:last-of-type {
+                    border-bottom: none;
+                }
+                @include sub-menu-ul-animation();
+            }
+        }
+        .porsche-sub-menu-items:hover {
+            @include sub-menu-list-items-animation();
+        }
+    }
+    /*VW sub menu*/
+    .vw-sub-menu {
+        display: none;
+    }
+    .primary-vw-li:hover .vw-sub-menu {
+        display: block;
+        position: absolute;
+        background-color: inherit;
+        border-radius: 5px;
+        padding: 30px 0;
+        @include sub-menu-ul-animation();
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            border-top: 2px solid $blueColorForItems;
+            background-color: black;
+            border-radius: 5px;
+            li {
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid $blueColorForItems;
+                &:last-of-type {
+                    border-bottom: none;
+                }
+                @include sub-menu-ul-animation();
+            }
+        }
+        .vw-sub-menu-items:hover {
+            @include sub-menu-list-items-animation();
+        }
+    }
+    /*Rover sub-menu*/
+    .rover-sub-menu {
+        display: none;
+    }
+    .primary-rover-li:hover .rover-sub-menu {
+        display: block;
+        position: absolute;
+        background-color: inherit;
+        border-radius: 5px;
+        padding: 30px 0;
+        @include sub-menu-ul-animation();
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            border-top: 2px solid $blueColorForItems;
+            background-color: black;
+            border-radius: 5px;
+            li {
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid $blueColorForItems;
+                &:last-of-type {
+                    border-bottom: none;
+                }
+                @include sub-menu-ul-animation();
+            }
+        }
+        .rover-sub-menu-items:hover {
+            @include sub-menu-list-items-animation();
+        }
+    }
+
+    /*Tesla sub-menu*/
+    .tesla-sub-menu {
+        display: none;
+    }
+    .primary-tesla-li:hover .tesla-sub-menu {
+        display: block;
+        position: absolute;
+        background-color: inherit;
+        border-radius: 5px;
+        padding: 30px 0;
+        @include sub-menu-ul-animation();
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            border-top: 2px solid $blueColorForItems;
+            background-color: black;
+            border-radius: 5px;
+            li {
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid $blueColorForItems;
+                &:last-of-type {
+                    border-bottom: none;
+                }
+                @include sub-menu-ul-animation();
+            }
+        }
+        .tesla-sub-menu-items:hover {
+            @include sub-menu-list-items-animation();
+        }
+    }
+}
+// Main
+// Heading
+.heading{
+    h1{
+        @include sub-menu-pages-h1();
+    }
+}
+/*Mercedes ML-GL-class*/
+
+.mercedes-ml–w164-gl–x164 {
+    .product-wrapper-w164-x164 {
+        display: grid;
+        grid-template-columns: 900px 200px;
+        grid-template-rows: 70px;
+        justify-content: center;
+        background-color: black;
+        p {
+            color: white;
+            font-weight: bold;
+            border: 1px solid gray;
+            padding-top: 20px;
+            padding-left: 15px;
+            cursor: default;
+        }
+    }
+    .mercedes-ml-gl-class-prices-wrapper {
+        display: grid;
+        grid-template-columns: 900px 200px;
+        justify-content: center;
+        background-color: #262626;
+        color: white;
+        .mercedes-ml-gl-class-prices-wrapper__content {
+            display: grid;
+            grid-template-rows: repeat(10, 50px);
+            p {
+                border: 1px solid gray;
+                border-right: none;
+                padding-top: 10px;
+                padding-left: 15px;
+                cursor: default;
+                transition: color 0.3s ease-out;
+                &:hover {
+                    color: $blueColorForItems;
+                    background-color: grayscale($color: #000000);
+                }
+            }
+        }
+        .mercedes-ml-gl-class-prices-wrapper__prices {
+            display: grid;
+            grid-template-rows: repeat(10, 50px);
+            p {
+                border: 1px solid gray;
+                padding-top: 10px;
+                padding-left: 15px;
+                cursor: default;
+                transition: color 0.3s ease-out;
+                &:hover {
+                    color: $blueColorForItems;
+                    background-color: grayscale($color: #000000);
+                }
+            }
+        }
+    }
+}
+/*Mercedes ML-GL-class*/
+
+.mercedes-ml–w166-gl–x166 {
+    .product-wrapper-w166-x166 {
+        display: grid;
+        grid-template-columns: 900px 200px;
+        grid-template-rows: 70px;
+        justify-content: center;
+        background-color: black;
+        p {
+            color: white;
+            font-weight: bold;
+            border: 1px solid gray;
+            padding-top: 20px;
+            padding-left: 15px;
+            cursor: default;
+        }
+    }
+    .mercedes-ml-w166-gl-x166-class-prices-wrapper {
+        display: grid;
+        grid-template-columns: 900px 200px;
+        justify-content: center;
+        background-color: #262626;
+        color: white;
+        .mercedes-ml-w166-gl-x166-class-prices-wrapper__content {
+            display: grid;
+            grid-template-rows: repeat(11, 50px);
+            p {
+                border: 1px solid gray;
+                border-right: none;
+                padding-top: 10px;
+                padding-left: 15px;
+                cursor: default;
+                transition: color 0.3s ease-out;
+                &:hover {
+                    color: $blueColorForItems;
+                    background-color: grayscale($color: #000000);
+                }
+            }
+        }
+        .mercedes-ml-w166-gl-x166-class-prices-wrapper__prices {
+            display: grid;
+            grid-template-rows: repeat(11, 50px);
+            p {
+                border: 1px solid gray;
+                padding-top: 10px;
+                padding-left: 15px;
+                cursor: default;
+                transition: color 0.3s ease-out;
+                &:hover {
+                    color: $blueColorForItems;
+                    background-color: grayscale($color: #000000);
+                }
+            }
+        }
+    }
+}
+// Footer
+footer {
+    padding: 30px;
+    background-color: $sectionsColor;
+    color: white;
+    border-top: 1px solid gray;
+    text-align: center;
+    span {
+        color: $blueColorForItems;
+    }
+}

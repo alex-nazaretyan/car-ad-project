@@ -1,0 +1,512 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css");
+/*PRIMARY MENU ANIMATION*/
+@keyframes primary-menu-animation {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+    color: #026BF3;
+  }
+  to {
+    color: white;
+    opacity: 1;
+  }
+}
+
+/*PRIMARY MENU ON HOVER ANIMATION*/
+@keyframes reveal-left {
+  from {
+    opacity: 0;
+    transform: scale(0);
+    background-color: inherit;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    background-color: inherit;
+  }
+}
+
+@keyframes reveal-left-div {
+  from {
+    padding: 0 0;
+    border-top: none;
+  }
+  to {
+    padding: 30px 10px;
+  }
+}
+
+/*Primary menu list items*/
+/*Sub menu ul animation*/
+/*Sub menu li animation with transition*/
+/*Sub menu pages H1*/
+.header-background-image {
+  background-image: url(../images/ferari-pic.jfif);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: -1;
+  cursor: pointer;
+}
+
+.header-background-image h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 180px;
+}
+
+nav {
+  width: 90%;
+  background-color: #433b4236;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 75px;
+  opacity: 0.9;
+  transform: skew(-35deg);
+  margin-top: 3px;
+}
+
+.contacts {
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+}
+
+.contacts .contacts-phone {
+  display: flex;
+  transform: skew(35deg);
+  align-items: center;
+}
+
+.contacts .contacts-phone i {
+  font-size: 30px;
+  padding-right: 35px;
+  color: #026BF3;
+  animation: phone-contact-animation 1.2s ease-out 0.1s;
+}
+
+.contacts .contacts-phone .contacts-phone-content p:first-of-type {
+  font-size: 18px;
+}
+
+.contacts .contacts-phone .contacts-phone-content p:last-of-type {
+  font-size: 22px;
+}
+
+.contacts .contacts-working-graphic {
+  display: flex;
+  align-items: center;
+  transform: skew(35deg);
+}
+
+.contacts .contacts-working-graphic i {
+  font-size: 30px;
+  padding-right: 35px;
+  color: #026BF3;
+  animation: graphic-work-animation 1.2s ease-out 0.1s;
+}
+
+.contacts .contacts-working-graphic p:first-of-type {
+  font-size: 18px;
+}
+
+.contacts .contacts-working-graphic p:last-of-type {
+  font-size: 22px;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 25px;
+  transform: skew(35deg);
+  /*Primary menu*/
+  /* Sub menu*/
+  /*Mercedes sub menu*/
+  /*Audi sub-menu*/
+  /*BMW sub menu*/
+  /*Porsche sub-menu*/
+  /*VW sub menu*/
+  /*Rover sub-menu*/
+  /*Tesla sub-menu*/
+}
+
+.nav-items h1 {
+  cursor: pointer;
+  transition: color 0.3s ease-out;
+}
+
+.nav-items h1:hover {
+  color: #026BF3;
+}
+
+.nav-items .primary-menu-ul {
+  display: flex;
+}
+
+.nav-items .primary-menu-ul .primary-menu-li {
+  padding: 0 16px;
+  font-size: 15px;
+  transition: color 0.3s ease-out;
+  animation: primary-menu-animation 0.9s ease-out;
+}
+
+.nav-items .primary-menu-ul .primary-menu-li:hover {
+  color: #026BF3;
+}
+
+.nav-items .mercedes-sub-menu {
+  display: none;
+}
+
+.nav-items .primary-mercedes-li:hover .mercedes-sub-menu {
+  display: block;
+  position: absolute;
+  background-color: inherit;
+  border-radius: 5px;
+  padding: 30px 0;
+  animation: reveal-left 0.3s ease-out forwards;
+}
+
+.nav-items .primary-mercedes-li:hover .mercedes-sub-menu ul {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid #026BF3;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.nav-items .primary-mercedes-li:hover .mercedes-sub-menu ul li {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #026BF3;
+  animation: reveal-left 0.3s ease-out forwards;
+}
+
+.nav-items .primary-mercedes-li:hover .mercedes-sub-menu ul li:last-of-type {
+  border-bottom: none;
+}
+
+.nav-items .primary-mercedes-li:hover .mercedes-sub-menu .mercedes-sub-menu-items:hover {
+  color: white;
+  transition: color 0.6s ease-out;
+}
+
+.nav-items .audi-sub-menu {
+  display: none;
+}
+
+.nav-items .primary-audi-li:hover .audi-sub-menu {
+  display: block;
+  position: absolute;
+  background-color: inherit;
+  border-radius: 5px;
+  padding: 30px 0;
+  animation: reveal-left 0.3s ease-out forwards;
+}
+
+.nav-items .primary-audi-li:hover .audi-sub-menu ul {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid #026BF3;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.nav-items .primary-audi-li:hover .audi-sub-menu ul li {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #026BF3;
+  animation: reveal-left 0.3s ease-out forwards;
+}
+
+.nav-items .primary-audi-li:hover .audi-sub-menu ul li:last-of-type {
+  border-bottom: none;
+}
+
+.nav-items .primary-audi-li:hover .audi-sub-menu .audi-sub-menu-items:hover {
+  color: white;
+  transition: color 0.6s ease-out;
+}
+
+.nav-items .bmw-sub-menu {
+  display: none;
+}
+
+.nav-items .primary-bmw-li:hover .bmw-sub-menu {
+  display: block;
+  position: absolute;
+  background-color: inherit;
+  border-radius: 5px;
+  padding: 30px 0;
+  animation: reveal-left 0.3s ease-out forwards;
+}
+
+.nav-items .primary-bmw-li:hover .bmw-sub-menu ul {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid #026BF3;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.nav-items .primary-bmw-li:hover .bmw-sub-menu ul li {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #026BF3;
+  animation: reveal-left 0.3s ease-out forwards;
+}
+
+.nav-items .primary-bmw-li:hover .bmw-sub-menu ul li:last-of-type {
+  border-bottom: none;
+}
+
+.nav-items .primary-bmw-li:hover .bmw-sub-menu .bmw-sub-menu-items:hover {
+  color: white;
+  transition: color 0.6s ease-out;
+}
+
+.nav-items .porsche-sub-menu {
+  display: none;
+}
+
+.nav-items .primary-porsche-li:hover .porsche-sub-menu {
+  display: block;
+  position: absolute;
+  background-color: inherit;
+  border-radius: 5px;
+  padding: 30px 0;
+  animation: reveal-left 0.3s ease-out forwards;
+}
+
+.nav-items .primary-porsche-li:hover .porsche-sub-menu ul {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid #026BF3;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.nav-items .primary-porsche-li:hover .porsche-sub-menu ul li {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #026BF3;
+  animation: reveal-left 0.3s ease-out forwards;
+}
+
+.nav-items .primary-porsche-li:hover .porsche-sub-menu ul li:last-of-type {
+  border-bottom: none;
+}
+
+.nav-items .primary-porsche-li:hover .porsche-sub-menu .porsche-sub-menu-items:hover {
+  color: white;
+  transition: color 0.6s ease-out;
+}
+
+.nav-items .vw-sub-menu {
+  display: none;
+}
+
+.nav-items .primary-vw-li:hover .vw-sub-menu {
+  display: block;
+  position: absolute;
+  background-color: inherit;
+  border-radius: 5px;
+  padding: 30px 0;
+  animation: reveal-left 0.3s ease-out forwards;
+}
+
+.nav-items .primary-vw-li:hover .vw-sub-menu ul {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid #026BF3;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.nav-items .primary-vw-li:hover .vw-sub-menu ul li {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #026BF3;
+  animation: reveal-left 0.3s ease-out forwards;
+}
+
+.nav-items .primary-vw-li:hover .vw-sub-menu ul li:last-of-type {
+  border-bottom: none;
+}
+
+.nav-items .primary-vw-li:hover .vw-sub-menu .vw-sub-menu-items:hover {
+  color: white;
+  transition: color 0.6s ease-out;
+}
+
+.nav-items .rover-sub-menu {
+  display: none;
+}
+
+.nav-items .primary-rover-li:hover .rover-sub-menu {
+  display: block;
+  position: absolute;
+  background-color: inherit;
+  border-radius: 5px;
+  padding: 30px 0;
+  animation: reveal-left 0.3s ease-out forwards;
+}
+
+.nav-items .primary-rover-li:hover .rover-sub-menu ul {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid #026BF3;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.nav-items .primary-rover-li:hover .rover-sub-menu ul li {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #026BF3;
+  animation: reveal-left 0.3s ease-out forwards;
+}
+
+.nav-items .primary-rover-li:hover .rover-sub-menu ul li:last-of-type {
+  border-bottom: none;
+}
+
+.nav-items .primary-rover-li:hover .rover-sub-menu .rover-sub-menu-items:hover {
+  color: white;
+  transition: color 0.6s ease-out;
+}
+
+.nav-items .tesla-sub-menu {
+  display: none;
+}
+
+.nav-items .primary-tesla-li:hover .tesla-sub-menu {
+  display: block;
+  position: absolute;
+  background-color: inherit;
+  border-radius: 5px;
+  padding: 30px 0;
+  animation: reveal-left 0.3s ease-out forwards;
+}
+
+.nav-items .primary-tesla-li:hover .tesla-sub-menu ul {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid #026BF3;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.nav-items .primary-tesla-li:hover .tesla-sub-menu ul li {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #026BF3;
+  animation: reveal-left 0.3s ease-out forwards;
+}
+
+.nav-items .primary-tesla-li:hover .tesla-sub-menu ul li:last-of-type {
+  border-bottom: none;
+}
+
+.nav-items .primary-tesla-li:hover .tesla-sub-menu .tesla-sub-menu-items:hover {
+  color: white;
+  transition: color 0.6s ease-out;
+}
+
+.google-map p iframe {
+  width: 100%;
+}
+
+.contact-wrapper {
+  background-color: #262626;
+  color: white;
+}
+
+.contact-wrapper h2 {
+  font-size: 40px;
+  text-align: center;
+  padding: 40px 0 15px 0;
+}
+
+.contact-wrapper .contact-wrapper__p {
+  font-size: 25px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.contact-wrapper .contact-wrapper-content {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 40px;
+}
+
+.contact-wrapper .contact-wrapper-content .contact-wrapper-phones {
+  display: flex;
+  align-items: center;
+}
+
+.contact-wrapper .contact-wrapper-content .contact-wrapper-phones i {
+  font-size: 30px;
+  color: #026BF3;
+  padding-right: 15px;
+}
+
+.contact-wrapper .contact-wrapper-content .contact-wrapper-location {
+  display: flex;
+  align-items: center;
+}
+
+.contact-wrapper .contact-wrapper-content .contact-wrapper-location i {
+  font-size: 30px;
+  color: #026BF3;
+  padding-right: 15px;
+}
+
+.contact-wrapper .contact-wrapper-content .contact-wrapper-email {
+  display: flex;
+  align-items: center;
+}
+
+.contact-wrapper .contact-wrapper-content .contact-wrapper-email i {
+  font-size: 30px;
+  color: #026BF3;
+  padding-right: 15px;
+}
+
+.links-content {
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px solid gray;
+  padding: 30px 0;
+  font-size: 30px;
+  color: #868686;
+}
+
+.links-content i {
+  transition: color 0.3s ease-out;
+}
+
+.links-content i:hover {
+  color: #026BF3;
+}
+
+footer {
+  padding: 30px;
+  background-color: #262626;
+  color: white;
+  border-top: 1px solid gray;
+  text-align: center;
+}
+
+footer span {
+  color: #026BF3;
+}

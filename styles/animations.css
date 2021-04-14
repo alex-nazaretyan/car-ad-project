@@ -1,0 +1,36 @@
+/*PRIMARY MENU ANIMATION*/
+@keyframes primary-menu-animation {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+    color: #026BF3;
+  }
+  to {
+    color: white;
+    opacity: 1;
+  }
+}
+
+/*PRIMARY MENU ON HOVER ANIMATION*/
+@keyframes reveal-left {
+  from {
+    opacity: 0;
+    transform: scale(0);
+    background-color: inherit;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    background-color: inherit;
+  }
+}
+
+@keyframes reveal-left-div {
+  from {
+    padding: 0 0;
+    border-top: none;
+  }
+  to {
+    padding: 30px 10px;
+  }
+}
